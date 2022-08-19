@@ -12,17 +12,14 @@ grid = [[5,3,0,0,7,0,0,0,0],
 
 def possible(row, column, number):
     global grid
-    #Is the number appearing in the given row?
     for i in range(0,9):
         if grid[row][i] == number:
             return False
 
-    #Is the number appearing in the given column?
     for i in range(0,9):
         if grid[i][column] == number:
             return False
-    
-    #Is the number appearing in the given square?
+   
     x0 = (column // 3) * 3
     y0 = (row // 3) * 3
     for i in range(0,3):
